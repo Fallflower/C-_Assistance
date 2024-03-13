@@ -70,7 +70,8 @@ public:
 	virtual const char * what(void) const noexcept override
 	{
 		string text = "Error code:\t" + to_string(ecode) + "\nMessage:\t" + mes;
-		return text.c_str();
+		static const char * temp = text.c_str();
+		return temp;
 	}
 };
 
